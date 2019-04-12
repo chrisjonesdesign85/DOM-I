@@ -57,7 +57,32 @@ myALinks[2].textContent = 'Vision';
 myALinks[3].textContent = 'Features';
 myALinks[4].textContent = 'About';
 myALinks[5].textContent = 'Contact';
+// end nav
 
+// add more nav content with .append
+const newLink = document.createElement('a')
+newLink.href = "#"
+newLink.textContent = 'Policies'
+
+const nav = document.querySelector('nav')
+nav.appendChild(newLink); // used .append to add to the end of the content
+// end add more nav content
+
+
+const newLink2 = document.createElement('a')
+newLink2.href = "#"
+newLink2.textContent = "Home"
+
+const nav = document.querySelector('nav')
+nav.prepend(newLink2) // used .prepend to add a link to the beginning of the nav
+// end add more nav content
+
+//nav-links-green
+const green = document.querySelectorAll('nav a')
+for (let i = 0; i < green.length; i++) {
+  const changeColor = green[i]
+  changeColor.style.color = 'green';
+} // end nav-links-green
 
 
 //cta-img
@@ -71,8 +96,6 @@ ctaH1.textContent = siteContent['cta']['h1']
 //cta-btn
 let ctaBtn = document.querySelector('button')
 ctaBtn.textContent = siteContent['cta']['button']
-
-
 
 
 // main-content-features-h4
@@ -94,7 +117,6 @@ aboutP.textContent = siteContent['main-content']['about-content']
 // middle img
 let middleImg = document.querySelector('#middle-img')
 middleImg.setAttribute("src", siteContent['main-content']['middle-img-src'])
-
 
 
 // bottom content
@@ -141,10 +163,3 @@ contactP3.textContent = ['sales@greatidea.io']
 // footer
 let footerP = document.querySelector('body > div > footer > p')
 footerP.textContent = ['Copyright Great Idea! 2018']
-
-//nav-links-green
-const green = document.querySelectorAll('nav a')
-for (let i = 0; i < green.length; i++) {
-  const changeColor = green[i]
-  changeColor.style.color = 'green';
-}
