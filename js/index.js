@@ -73,7 +73,7 @@ const newLink2 = document.createElement('a')
 newLink2.href = "#"
 newLink2.textContent = "Home"
 
-const nav = document.querySelector('nav')
+document.querySelector('nav')
 nav.prepend(newLink2) // used .prepend to add a link to the beginning of the nav
 // end add more nav content
 
