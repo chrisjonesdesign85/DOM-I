@@ -141,3 +141,10 @@ contactP3.textContent = ['sales@greatidea.io']
 // footer
 let footerP = document.querySelector('body > div > footer > p')
 footerP.textContent = ['Copyright Great Idea! 2018']
+
+//nav-links-green
+const green = document.querySelectorAll('nav a')
+for (let i = 0; i < green.length; i++) {
+  const changeColor = green[i]
+  changeColor.style.color = 'green';
+}
